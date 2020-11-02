@@ -9,8 +9,10 @@ mongoose.connect('mongodb://localhost:27017/VideoLibraryTW', {
     keepAlive: 1
 });
 
+app.use(express.static(__dirname + '/src'));
+
 app.get('/', (req, res) => {
-    res.send('<h1>Serwer dziala!!</h1>')
+    res.sendFile(path.join(__dirname, 'src/views', 'mainPage.html'));
 });
 
 app.listen(PORT,() => console.log(`Serwer wystartowal na porcie ${PORT}`));

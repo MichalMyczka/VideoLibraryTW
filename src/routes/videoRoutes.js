@@ -11,10 +11,10 @@ export default () => {
     // GET /userStories
     api.get('/', catchAsync(videoController.findAll));
 
-    // POST /userStories
-    api.post('/', catchAsync(videoController.create));
+    // POST /api/video
+    api.post('/api/video', catchAsync(videoController.create));
 
-    // PUT /userStories/:id
+    // PUT /video/:id
     api.put('/:id', catchAsync(videoController.update));
 
     // DELETE /userStories/:id
