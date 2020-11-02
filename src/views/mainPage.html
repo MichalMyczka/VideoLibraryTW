@@ -8,22 +8,50 @@
 <body>
     <div id="mainContent">
         <div id="topbar">
-            <form>
+            <form id="searchform">
                 <label for="searchbar">
-                    SEARCH BAR
+                    SEARCH BAR:
                 </label>
-                <input type="text" id="searchbar" name="searchbar">
+                <input type="text" id="searchbar" name="searchbar" placeholder="search by name or tag">
                 <button id="searchbutton">search</button>
             </form>
         </div>
         <div id="videocontent">
-            <div id="videotemplate">
-                <div id="videothumbnail">
+
+            <div class="videotemplate">
+
+                <div class="videothumbnail">
+                    <iframe
+                            width="auto"
+                            height="auto"
+                            src="https://www.youtube.com/embed/W8r-tXRLazs"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+                    </iframe>
+                </div>
+                <div class="videoinfo">
+                    <p> TITLE: jakis inny</p>
+                    <p> DESCRIPTION: costam innego</p>
 
                 </div>
-                <div id="videoinfo">
+            </div>
 
-                </div>
+                <div class="videotemplate">
+
+                    <div class="videothumbnail">
+                        <iframe
+                                width="auto"
+                                height="auto"
+                                src="https://www.youtube.com/embed/XfR9iY5y94s"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+                        </iframe>
+                    </div>
+                    <div class="videoinfo">
+                        <p> TITLE: jakistam</p>
+                        <p> DESCRIPTION: costam</p>
+
+                    </div>
             </div>
 
         </div>
