@@ -10,6 +10,12 @@ body{
     margin-top: 3%;
     text-align: center;
 }
+#logo{
+    float: left;
+}
+#search{
+    float: left;
+}
 #videocontent{
     background: darkcyan;
     width: 50%;

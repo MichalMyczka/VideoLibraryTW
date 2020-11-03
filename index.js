@@ -1,3 +1,8 @@
+
+// import { notFound, catchErrors } from 'src/middlewares/errors';
+
+import videoRoutes from "./src/routes/videoRoutes";
+
 const path = require('path');
 const express = require("express");
 const app = express();
@@ -11,8 +16,15 @@ mongoose.connect('mongodb://localhost:27017/VideoLibraryTW', {
 
 app.use(express.static(__dirname + '/src'));
 
+app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use('/videos', videoRoutes());
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'src/views', 'mainPage.html'));
 });
 
 app.listen(PORT,() => console.log(`Serwer wystartowal na porcie ${PORT}`));
+

@@ -12,17 +12,13 @@ export default () => {
     api.get('/', catchAsync(videoController.findAll));
 
     // POST /api/video
-    api.post('/api/video', catchAsync(videoController.create));
+    api.post('/add', catchAsync(videoController.create));
 
     // PUT /video/:id
     api.put('/:id', catchAsync(videoController.update));
 
     // DELETE /userStories/:id
     api.delete('/:id', catchAsync(videoController.remove));
-
-    api.get('/story', (req, res) => {
-        res.sendFile(__dirname + 'addUserStory.html')
-    })
 
     return api;
 }
