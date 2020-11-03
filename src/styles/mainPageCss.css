@@ -4,12 +4,21 @@ body{
 #topbar{
     background-color: dodgerblue;
     width: 40%;
-    padding: 1%;
+    padding: 3%;
     border-radius: 15px;
     margin-left: 30%;
     margin-top: 3%;
     text-align: center;
 }
+
+.logo{
+    float: left;
+}
+
+#search{
+    float: left;
+}
+
 #videocontent{
     background: darkcyan;
     width: 50%;

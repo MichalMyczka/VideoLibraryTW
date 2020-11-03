@@ -26,5 +26,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'src/views', 'mainPage.html'));
 });
 
+app.get('/addvideo', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/views', 'addNewVideo.html'));
+});
+
 app.listen(PORT,() => console.log(`Serwer wystartowal na porcie ${PORT}`));
 

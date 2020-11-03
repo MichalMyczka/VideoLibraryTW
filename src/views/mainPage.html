@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Video Library</title>
     <link rel="stylesheet" href="../styles/mainPageCss.css">
+    <script src="../scripts/showAllVideosHandler.js" defer></script>
 </head>
 <body>
     <div id="mainContent">
         <div id="topbar">
-            <div id="logo">
-                <img src="../images/youtube.png" width="50" height="50" alt="logo">
+            <div class="logo">
+                <a href="../views/mainPage.html"><img src="../images/youtube.png" width="50" height="50" alt="logo"></a>
             </div>
             <div id="search">
                 <form id="searchform">
@@ -20,44 +21,49 @@
                     <button id="searchbutton">search</button>
                 </form>
             </div>
+            <div id="addVideo">
+                <form action="http://localhost:5000/addvideo">
+                    <input type="submit" value="Add New Video" />
+                </form>
+            </div>
         </div>
         <div id="videocontent">
 
-            <div class="videotemplate">
+<!--            <div class="videotemplate">-->
 
-                <div class="videothumbnail">
-                    <iframe
-                            width="auto"
-                            height="auto"
-                            src="https://www.youtube.com/embed/W8r-tXRLazs"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<!--                <div class="videothumbnail">-->
+<!--                    <iframe-->
+<!--                            width="auto"-->
+<!--                            height="auto"-->
+<!--                            src="https://www.youtube.com/embed/W8r-tXRLazs"-->
+<!--                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>-->
 
-                    </iframe>
-                </div>
-                <div class="videoinfo">
-                    <p> TITLE: jakis inny</p>
-                    <p> DESCRIPTION: costam innego</p>
+<!--                    </iframe>-->
+<!--                </div>-->
+<!--                <div class="videoinfo">-->
+<!--                    <p> TITLE: jakis inny</p>-->
+<!--                    <p> DESCRIPTION: costam innego</p>-->
 
-                </div>
-            </div>
+<!--                </div>-->
+<!--            </div>-->
 
-                <div class="videotemplate">
+<!--                <div class="videotemplate">-->
 
-                    <div class="videothumbnail">
-                        <iframe
-                                width="auto"
-                                height="auto"
-                                src="https://www.youtube.com/embed/XfR9iY5y94s"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<!--                    <div class="videothumbnail">-->
+<!--                        <iframe-->
+<!--                                width="auto"-->
+<!--                                height="auto"-->
+<!--                                src="https://www.youtube.com/embed/XfR9iY5y94s"-->
+<!--                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>-->
 
-                        </iframe>
-                    </div>
-                    <div class="videoinfo">
-                        <p> TITLE: jakistam</p>
-                        <p> DESCRIPTION: costam</p>
+<!--                        </iframe>-->
+<!--                    </div>-->
+<!--                    <div class="videoinfo">-->
+<!--                        <p> TITLE: jakistam</p>-->
+<!--                        <p> DESCRIPTION: costam</p>-->
 
-                    </div>
-            </div>
+<!--                    </div>-->
+<!--            </div>-->
 
         </div>
     </div>

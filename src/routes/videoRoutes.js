@@ -12,7 +12,7 @@ export default () => {
     api.get('/', catchAsync(videoController.findAll));
 
     // POST /api/video
-    api.post('/add', catchAsync(videoController.create));
+    api.post('/', catchAsync(videoController.create));
 
     // PUT /video/:id
     api.put('/:id', catchAsync(videoController.update));
