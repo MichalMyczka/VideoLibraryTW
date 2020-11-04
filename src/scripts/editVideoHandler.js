@@ -55,5 +55,3 @@ form.addEventListener('submit', function (e) {
 });
 
 getVideo();
-
-
