@@ -49,5 +49,4 @@ export default {
         return res.status(200).send({ data: video, message: 'video has been removed' });
     }
 
-
 }

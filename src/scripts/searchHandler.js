@@ -8,9 +8,6 @@ form.addEventListener('submit', function (e) {
         description: this.searchbar.value,
         tag: this.searchbar.value
     };
-    console.log(body);
-    console.log(body.title)
-
 
     function getVideos() {
         fetch("http://localhost:5000/videos")
@@ -21,7 +18,6 @@ form.addEventListener('submit', function (e) {
                 return  response.json();
             })
             .then(function (videos) {
-                console.log(videos.data)
                 matchVideos(videos.data);
 
             }).catch(function (error) {
@@ -32,10 +28,8 @@ form.addEventListener('submit', function (e) {
     function matchVideos(videosList) {
         let list = [];
         for(let i=0; i<videosList.length; i++){
-            console.log(videosList[i]["title"])
             if(videosList[i]["title"].includes(body.title)){
                 list.push(videosList[i]);
-                console.log(videosList[i])
             }
             if(videosList[i]["description"].includes(body.description)){
                 if(videosList[i]["description"].includes(videosList[i]["title"]) || videosList[i]["title"].includes(videosList[i]["description"])){
@@ -47,11 +41,9 @@ form.addEventListener('submit', function (e) {
                 if(videosList[i]["tag"].includes(videosList[i]["description"]) || videosList[i]["tag"].includes(videosList[i]["title"] ||  videosList[i]["title"].includes(videosList[i]["tag"]) || videosList[i]["description"].includes(videosList[i]["tag"]))){
                     continue;
                 }
-
                 list.push(videosList[i]);
             }
         }
-        console.log(list);
         document.getElementById("videocontent").innerHTML = "";
         addVideosToList(list);
     }

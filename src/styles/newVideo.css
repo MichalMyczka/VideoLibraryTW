@@ -44,3 +44,7 @@ body{
 .logo{
     margin-left: 50%;
 }
+.insideLogo{
+    width: 100px;
+    height: 100px;
+}

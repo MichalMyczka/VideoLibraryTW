@@ -8,16 +8,16 @@ export default () => {
     // GET /videos/id
     api.get('/:id', catchAsync(videoController.findOne));
 
-    // GET /userStories
+    // GET /videos
     api.get('/', catchAsync(videoController.findAll));
 
-    // POST /api/video
+    // POST /videos
     api.post('/', catchAsync(videoController.create));
 
-    // PUT /video/:id
+    // PUT /videos/id
     api.put('/:id', catchAsync(videoController.update));
 
-    // DELETE /userStories/:id
+    // DELETE /videos/id
     api.delete('/:id', catchAsync(videoController.remove));
 
     return api;

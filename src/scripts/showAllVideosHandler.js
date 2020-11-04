@@ -30,7 +30,6 @@ function randomNoRepeats(videosList) {
 function addVideosToList(videosList){
     localStorage.setItem("id", videosList.length);
 
-
     let randomList = [];
     let chooser = randomNoRepeats(videosList);
     randomList.push(chooser());
@@ -38,8 +37,6 @@ function addVideosToList(videosList){
     randomList.push(chooser());
     randomList.push(chooser());
     randomList.push(chooser());
-
-
 
     let sel = document.getElementById("videocontent");
     randomList.forEach(video => {
@@ -68,10 +65,5 @@ function addVideosToList(videosList){
         div1.appendChild(div4);
     })
 }
-
-function getId(id){
-    localStorage.setItem("editid", id);
-}
-
 
 getVideos();

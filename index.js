@@ -1,6 +1,3 @@
-
-// import { notFound, catchErrors } from 'src/middlewares/errors';
-
 import videoRoutes from "./src/routes/videoRoutes";
 
 const path = require('path');
