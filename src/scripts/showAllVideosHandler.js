@@ -14,29 +14,35 @@ function getVideos() {
     });
 }
 
+function randomNoRepeats(videosList) {
+    let copy = videosList.slice(0);
+    return function () {
+        if (copy.length < 1) {
+            copy = videosList.slice(0);
+        }
+        let index = Math.floor(Math.random() * copy.length);
+        let item = copy[index];
+        copy.splice(index, 1);
+        return item;
+    };
+}
 
 function addVideosToList(videosList){
     localStorage.setItem("id", videosList.length);
 
-        let chooseVideo = function () {
-            let unique = true;
-            let num = Math.floor(Math.random() * videosList.length - 5);
-            let video = videosList.splice(num,1);
-            videosList.push(video);
-        }
 
-        let x = Math.floor(Math.random() * videosList.length);
-        let lista = []
-        lista += x;
+    let randomList = [];
+    let chooser = randomNoRepeats(videosList);
+    randomList.push(chooser());
+    randomList.push(chooser());
+    randomList.push(chooser());
+    randomList.push(chooser());
+    randomList.push(chooser());
 
-        let list = [];
-
-        list += videosList[x]
-    }
 
 
     let sel = document.getElementById("videocontent");
-    videosList.forEach(video => {
+    randomList.forEach(video => {
         let div1 = document.createElement('div');
         div1.className = "videotemplate";
 
