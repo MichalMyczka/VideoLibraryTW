@@ -40,14 +40,11 @@ export default {
         video.contactEmail = req.body.contactEmail;
         await video.save();
 
-        return res.status(200).send({ data: video, message: 'video updated'})
+        return res.status(200).send({ data: video, message: 'user story updated'})
     },
 
     async remove(req, res, next) {
-        const video = await Video.findOne({ id: req.params.id });
-        if (!video) return next();
-        video.remove();
-        return res.status(200).send({ data: video, message: 'video has been removed' });
+
     }
 
 

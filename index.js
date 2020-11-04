@@ -1,8 +1,6 @@
-
 // import { notFound, catchErrors } from 'src/middlewares/errors';
-
 import videoRoutes from "./src/routes/videoRoutes";
-
+import { notFound, catchErrors } from './src/middlewares/errors';
 const path = require('path');
 const express = require("express");
 const app = express();
@@ -15,6 +13,9 @@ mongoose.connect('mongodb://localhost:27017/VideoLibraryTW', {
 });
 
 app.use(express.static(__dirname + '/src'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/videos', videoRoutes());
 
 app.use(express.json());
 

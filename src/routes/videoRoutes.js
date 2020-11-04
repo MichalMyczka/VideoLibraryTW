@@ -5,19 +5,19 @@ import {catchAsync} from "../middlewares/errors";
 export default () => {
     const api = Router();
 
-    // GET /userStories/:id
+    // GET /videos/:id
     api.get('/:id', catchAsync(videoController.findOne));
 
-    // GET /userStories
+    // GET /videos/
     api.get('/', catchAsync(videoController.findAll));
 
-    // POST /api/video
+    // POST videos/add
     api.post('/', catchAsync(videoController.create));
 
-    // PUT /video/:id
+    // PUT /videos/:id
     api.put('/:id', catchAsync(videoController.update));
 
-    // DELETE /userStories/:id
+    // DELETE /videos/:id
     api.delete('/:id', catchAsync(videoController.remove));
 
     return api;
