@@ -51,17 +51,26 @@ function addVideosToList(videosList){
         div2.innerHTML = `<iframe width=\"auto\" height=\"auto\" src= ${video.videoURL} allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>`
 
         let div3 = document.createElement('div');
-        div3.className = "videoinfo"
+        div3.className = "videoinfo";
         div3.innerHTML = `<p>${video.title}</p>
                              <p>${video.description}</p>
                              <p>${video.tag}</p>
                              <p>Uploaded By: ${video.uploadedBy}</p>
-                             <p>${video.contactEmail}</p>`
+                             <p>${video.contactEmail}</p>
+                             <p>Video ID: ${video.id}</p>`
+        let div4 = document.createElement('div');
+        div4.className = "editButton";
+        div4.innerHTML = `<a href='../views/editVideo.html?id=${video.id}' class='button'>Edit Video</a>`
 
         sel.appendChild(div1);
         div1.appendChild(div2);
         div1.appendChild(div3);
+        div1.appendChild(div4);
     })
+}
+
+function getId(id){
+    localStorage.setItem("editid", id);
 }
 
 

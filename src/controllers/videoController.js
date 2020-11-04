@@ -31,7 +31,6 @@ export default {
         const video = await Video.findOne({ id: req.params.id})
         if (!video) return next();
 
-        video.id = req.body.id;
         video.title = req.body.title;
         video.description = req.body.description;
         video.tag = req.body.tag;

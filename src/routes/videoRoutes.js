@@ -5,7 +5,7 @@ import {catchAsync} from "../middlewares/errors";
 export default () => {
     const api = Router();
 
-    // GET /userStories/:id
+    // GET /videos/id
     api.get('/:id', catchAsync(videoController.findOne));
 
     // GET /userStories

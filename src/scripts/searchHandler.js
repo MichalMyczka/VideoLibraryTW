@@ -38,13 +38,13 @@ form.addEventListener('submit', function (e) {
                 console.log(videosList[i])
             }
             if(videosList[i]["description"].includes(body.description)){
-                if(videosList[i]["description"].includes(videosList[i]["title"])){
+                if(videosList[i]["description"].includes(videosList[i]["title"]) || videosList[i]["title"].includes(videosList[i]["description"])){
                     continue;
                 }
                 list.push(videosList[i]);
             }
-            if(videosList[i]["tag"].includes(body.tag)){
-                if(videosList[i]["tag"].includes(videosList[i]["description"]) || videosList[i]["tag"].includes(videosList[i]["title"])){
+            if(body.tag.includes("#") && videosList[i]["tag"].includes(body.tag)){
+                if(videosList[i]["tag"].includes(videosList[i]["description"]) || videosList[i]["tag"].includes(videosList[i]["title"] ||  videosList[i]["title"].includes(videosList[i]["tag"]) || videosList[i]["description"].includes(videosList[i]["tag"]))){
                     continue;
                 }
 
