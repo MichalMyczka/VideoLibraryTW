@@ -52,8 +52,6 @@ form.addEventListener('submit', function (e) {
         .then(response => {
             window.location.href = "/";
         });
-
-
 });
 
 getVideo();

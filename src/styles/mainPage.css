@@ -65,3 +65,7 @@ body{
     color: white;
     box-shadow: 3px 3px 31px 3px rgba(111,220,247,1);
 }
+.insideLogo{
+    width: 50px;
+    height: 50px;
+}
