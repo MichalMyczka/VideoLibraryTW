@@ -31,6 +31,7 @@ body{
 }
 .videotemplate{
     background-color: darkolivegreen;
+    opacity: 80%;
     display: flex;
     margin-bottom: 3%;
     margin-top: 5%;
