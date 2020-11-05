@@ -32,6 +32,8 @@ const form = document.querySelector("#editVideo");
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
+    if(validateForm("editVideo")){
+
     const body = {
         title: this.videoTitle.value,
         description: this.videoDescription.value,
@@ -52,6 +54,7 @@ form.addEventListener('submit', function (e) {
         .then(response => {
             window.location.href = "/";
         });
+    }
 });
 
 getVideo();

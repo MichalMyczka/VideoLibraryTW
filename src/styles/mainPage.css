@@ -2,15 +2,6 @@ body{
     background: url("../images/tlo.jpg");
     color: lightgray;
 }
-#topbar{
-    background-color: dodgerblue;
-    width: 40%;
-    padding: 3%;
-    border-radius: 15px;
-    margin-left: 30%;
-    margin-top: 3%;
-    text-align: center;
-}
 
 .logo{
     margin-left: 50%;
@@ -18,7 +9,12 @@ body{
 
 #search{
     float: left;
+    margin-left: 45%;
 }
+#addVideo{
+    margin-left: 80%;
+}
+
 
 #videocontent{
     background: radial-gradient(circle, rgba(179,178,178,0.8) 25%, rgba(143,139,131,0.8) 100%);
@@ -53,7 +49,7 @@ body{
 .button{
     margin-left: 10%;
     margin-top: 10%;
-    background-color: dodgerblue;
+    background-color: lightslategray;
     border: none;
     color: black;
     text-align: center;
@@ -67,9 +63,28 @@ body{
     box-sizing: border-box;
 }
 .button:hover {
-    background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(45,145,166,0.9836309523809523) 55%, rgba(9,9,121,1) 100%);
+    background: linear-gradient(130deg, rgba(89,131,54,1) 25%, rgba(66,166,27,1) 48%, rgba(24,142,7,1) 81%);
     color: white;
-    box-shadow: 3px 3px 31px 3px rgba(111,220,247,1);
+    box-shadow: 3px 3px 31px 3px rgba(28,51,8,1);
+}
+.newVideoButton{
+    background-color: lightslategray;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 1em;
+    width: 40%;
+    box-sizing: border-box;
+}
+.newVideoButton:hover {
+    background: linear-gradient(130deg, rgba(89,131,54,1) 25%, rgba(66,166,27,1) 48%, rgba(24,142,7,1) 81%);
+    color: white;
+    box-shadow: 3px 3px 31px 3px rgba(28,51,8,1);
 }
 .insideLogo{
     width: 100px;
