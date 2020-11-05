@@ -1,9 +1,10 @@
 body{
-    background-color: darkcyan;
+    background: url("../images/tlo.jpg");
+    color: lightgray;
 }
 #container{
+    background: radial-gradient(circle, rgba(179,178,178,0.8) 25%, rgba(143,139,131,0.8) 100%); /* 0.9 jesli za bardzo */
     width: 40%;
-    background-color: coral;
     margin-left: 30%;
     margin-top: 1%;
     padding: 2%;
@@ -12,7 +13,7 @@ body{
 
 }
 .input{
-    background-color: burlywood;
+    background-color: darkolivegreen;
     margin-top: 5%;
     border-radius: 15px;
     padding: 3%;

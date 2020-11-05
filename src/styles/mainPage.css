@@ -1,5 +1,6 @@
 body{
-    background: deepskyblue;
+    background: url("../images/tlo.jpg");
+    color: lightgray;
 }
 #topbar{
     background-color: dodgerblue;
@@ -12,7 +13,7 @@ body{
 }
 
 .logo{
-    float: left;
+    margin-left: 50%;
 }
 
 #search{
@@ -20,24 +21,28 @@ body{
 }
 
 #videocontent{
-    background: darkcyan;
-    width: 50%;
-    padding: 3% 10% 10% 10%;
-    margin-left: 15%;
-    margin-top: 5%;
+    background: radial-gradient(circle, rgba(179,178,178,0.8) 25%, rgba(143,139,131,0.8) 100%);
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 1%;
+    padding: 2%;
+    text-align: center;
     border-radius: 30px;
 }
 .videotemplate{
-    background: coral;
-    padding: 3%;
-    border-radius: 30px;
+    background-color: darkolivegreen;
     display: flex;
     margin-bottom: 3%;
+    margin-top: 5%;
+    border-radius: 15px;
+    padding: 3%;
 }
 .videoinfo{
-    margin-left: 15%;
+    margin-left: 10%;
 }
 .videothumbnail{
+    margin-top: 5%;
+    margin-left: 3%;
 
 }
 .editButton{
@@ -66,6 +71,7 @@ body{
     box-shadow: 3px 3px 31px 3px rgba(111,220,247,1);
 }
 .insideLogo{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
+
