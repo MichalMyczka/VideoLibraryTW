@@ -2,9 +2,11 @@
 const form = document.querySelector("#newVideo");
 
 
-
 form.addEventListener('submit',e => {
     e.preventDefault();
+
+
+    if(validateForm("newVideo")){
 
     const body = {
         id: localStorage.getItem("id"),
@@ -28,4 +30,5 @@ form.addEventListener('submit',e => {
         .then(response => {
             window.location.href = "/";
         });
+    }
 });

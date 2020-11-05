@@ -6,29 +6,31 @@
     <link rel="stylesheet" href="../styles/mainPage.css">
     <script src="../scripts/showAllVideosHandler.js" defer></script>
     <script src="../scripts/searchHandler.js" defer></script>
+    <link rel="stylesheet" href="../styles/searchbar.css">
 </head>
 <body>
+
 <div class="logo">
     <a href="../views/mainPage.html"><img src="../images/youtube.png" alt="logo" class="insideLogo"></a>
 </div>
 
-
-<!--        <div id="topbar">-->
-<!--            <div id="search">-->
-<!--                <form id="searchform">-->
-<!--                    <label for="searchbar">-->
-<!--                        SEARCH BAR:-->
-<!--                    </label>-->
-<!--                    <input type="text" id="searchbar" name="searchbar" placeholder="search by name or tag">-->
-<!--                    <button id="button">search</button>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--            <div id="addVideo">-->
-<!--                <form action="http://localhost:5000/addvideo">-->
-<!--                    <input type="submit" value="Add New Video" />-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
+        <div id="topbar">
+            <div class="wrap">
+                <div id="search" class="search">
+                    <form id="searchform">
+                        <label for="searchbar">
+                            <input id="searchbar" name="searchbar" type="text" class="searchTerm" placeholder="What are you looking for?">
+                            <button id="button" class="searchButton"></button>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <div id="addVideo">
+                <form action="http://localhost:5000/addvideo">
+                    <input class="newVideoButton" type="submit" value="Add New Video" />
+                </form>
+            </div>
+        </div>
 
 
         <div id="videocontent"></div>
