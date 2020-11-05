@@ -1,5 +1,6 @@
 body{
     background: url("../images/tlo.jpg");
+    background-size: contain;
     color: lightgray;
 }
 
@@ -19,6 +20,7 @@ body{
 #videocontent{
     background: radial-gradient(circle, rgba(179,178,178,0.8) 25%, rgba(143,139,131,0.8) 100%);
     width: 40%;
+    height: auto;
     margin-left: 30%;
     margin-top: 1%;
     padding: 2%;
@@ -35,14 +37,18 @@ body{
     padding: 3%;
 }
 .videoinfo{
-    margin-left: 10%;
+    width: 30%;
+    height: 30%;
+    /*margin-left: 10%;*/
 }
 .videothumbnail{
-    margin-top: 5%;
+    margin-top: 10%;
     margin-left: 3%;
 
 }
 .editButton{
+    width: auto;
+    height: auto;
     margin-top: 10%;
     margin-left: 5%;
 }
@@ -78,7 +84,7 @@ body{
     cursor: pointer;
     border-radius: 10px;
     padding: 1em;
-    width: 40%;
+    width: 50%;
     box-sizing: border-box;
 }
 .newVideoButton:hover {
