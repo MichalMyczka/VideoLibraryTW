@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/videos', videoRoutes());
+app.use('/api', videoRoutes());
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'src/views', 'mainPage.html'));

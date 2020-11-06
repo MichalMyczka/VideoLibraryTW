@@ -27,6 +27,15 @@ form.addEventListener('submit', function (e) {
 
     function matchVideos(videosList) {
         let list = [];
+        //TODO 
+        for (const video of videosList) {
+            if(video["title"].includes(body.title)){
+                list.push(videosList[i]);
+            }
+
+            // ...
+        }
+
         for(let i=0; i<videosList.length; i++){
             if(videosList[i]["title"].includes(body.title)){
                 list.push(videosList[i]);

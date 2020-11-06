@@ -6,7 +6,7 @@ export default () => {
     const api = Router();
 
     // GET /videos/id
-    api.get('/:id', catchAsync(videoController.findOne));
+    api.get('video/:id', catchAsync(videoController.findOne));
 
     // GET /videos
     api.get('/', catchAsync(videoController.findAll));

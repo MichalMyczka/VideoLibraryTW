@@ -40,7 +40,7 @@ export default {
 
         // video.title = req.body.title;
         // video.description = req.body.description;
-        // video.tag = req.body.tag;
+        video.tag = req.body.tag ? req.body.tag : video.tag;
         // video.videoURL = req.body.videoURL;
         // video.uploadedBy = req.body.uploadedBy;
         // video.contactEmail = req.body.contactEmail;

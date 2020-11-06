@@ -1,12 +1,12 @@
 function validateForm(videoForm){
-    let title = document.forms[videoForm]["videoTitle"].value;
-    let url = document.forms[videoForm]["videoUrl"].value;
-    let uploadedBy = document.forms[videoForm]["uploadedBy"].value;
-    let contact = document.forms[videoForm]["contact"].value;
-    let tag = document.forms[videoForm]["videoTags"].value;
+    const title = document.forms[videoForm]["videoTitle"].value;
+    const url = document.forms[videoForm]["videoUrl"].value;
+    const uploadedBy = document.forms[videoForm]["uploadedBy"].value;
+    const contact = document.forms[videoForm]["contact"].value;
+    const tag = document.forms[videoForm]["videoTags"].value;
 
 
-    if (title.length < 3 || title.includes("\n")){
+    if (isInputShorter(title)){
         alert("title should be at least 3 characters long and contains only one line");
         return false;
     }
@@ -21,12 +21,11 @@ function validateForm(videoForm){
             }
         }
     }
-    if(contact !== ""){
-        if(){
-            alert("your contact should contain proper email form");
-            return false;
-        }
+    if(isEmail(contact)){
+        alert("your contact should contain proper email form");
+        return false;
     }
+
     if(isInputShorter(url) || !url.includes(".")){
         alert("enter proper url format");
         return false;
