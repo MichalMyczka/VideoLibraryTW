@@ -22,20 +22,30 @@ function validateForm(videoForm){
         }
     }
     if(contact !== ""){
-        if(!contact.includes("@") || !contact.includes(".") || contact.includes("\n")){
+        if(){
             alert("your contact should contain proper email form");
             return false;
         }
     }
-    if(url.length < 3 || url.includes("\n") || !url.includes(".")){
+    if(isInputShorter(url) || !url.includes(".")){
         alert("enter proper url format");
         return false;
     }
-    if(uploadedBy !== ""){
-        if(uploadedBy.length <3 || uploadedBy.includes("\n")){
-            alert("uploaded by should be at least 3 characters long");
-            return false;
-        }
+    if(isUploadedValidate(uploadedBy)){
+        alert("uploaded by should be at least 3 characters long");
+        return false;
     }
     return true;
+}
+
+function isUploadedValidate(uploadedBy) {
+    return uploadedBy !== "" && isInputShorter(uploadedBy);
+}
+
+function isInputShorter(input) {
+    return input.length < 3 || input.includes("\n")
+}
+
+function isEmail(email) {
+    return contact !== "" && (!contact.includes("@") || !contact.includes(".") || contact.includes("\n"));
 }
