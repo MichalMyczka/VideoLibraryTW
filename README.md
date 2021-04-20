@@ -18,42 +18,47 @@ Update existing video|As a User,I want to be able to change details of an existi
 For the sake of make this assignment easier to understand, each User Story represents an API endpoint in the web
 application:
 
-Get random videos​ [ GET ​/api/videos?random=true​ ]
-    ●It should return a list of 5 random videos.
+Get random videos​ [ GET ​/api/videos?random=true​ ] (realised by default with every page reload)
+
+  * It should return a list of 5 random videos.
+
+
 Add new video [ POST ​/api/videos​ ]
-    ●Request validation rules:
-        ○Video url:
-            ■single line text
-            ■required
-            ■has to fit url syntax
-        ○Video title:
-            ■single line text
-            ■required
-            ■minimum length: 3 characters
-        ○Video description:
-            ■multi-line text
-            ■required
-        ○Tags:
-            ■single line text input with value(s) starting with #, separated by white lines
-            ■optional
-        ○Uploaded by:
-            ■single line number input
-            ■minimum length: 3 characters
-            ■optional
-        ○Contact email:
-            ■single line input 
-            ■has to fit email syntax
-            ■optional
-    ●When the user clicks the "Add new Video" (sends POST request) button, the form should submit its data
-    ●Id for new video is auto-generated
-    ●... and the server should add these data to the ~~csv~~ database (MongoDB) storage.
+  * Request validation rules:
+      * Video url:  
+        * single line text
+        * required
+        * has to fit url syntax
+      * Video title:  
+        * single line text
+        * required
+        * minimum length: 3 characters
+      * Video description:  
+        * multi-line text
+        * required
+      * Tags:  
+        * single line text input with value(s) starting with #, separated by white lines
+        * optional
+      * Uploaded by:  
+        * single line number input
+        * minimum length: 3 characters
+        * optional
+      * Contact email:  
+        * single line input 
+        * has to fit email syntax
+        * optional
+  * When the user clicks the "Add new Video" (sends POST request) button, the form should submit its data
+  * Id for new video is auto-generated
+  * ... and the server should add these data to the ~~csv~~ database (MongoDB) storage.
+
+
 Update existing Video [ PUT ​/video/{{video_id}}​​]
-    ●The same form as the add page, but filled in with data of the given Video.
-    ●This data should be read from the csv file.
-    ●An additional checkbox with “archive” label
-    ●Archived videos should not be visible whenever I’m retrieving data
+  * The same form as the add page, but filled in with data of the given Video.
+  * This data should be read from the ~~csv~~ database file.
+  * An additional checkbox with “archive” label
+  * Archived videos should not be visible whenever I’m retrieving data
     
-    #How to run application
+    ### How to run application
     
     To run application you need to have MongoDB, Node,js and Express installed.
     1. First run Mongo server with command `sudo mongod`
