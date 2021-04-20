@@ -46,7 +46,7 @@ function addVideosToList(videosList){
         let div2 = document.createElement('div');
         div2.className = "videothumbnail";
         div2.innerHTML = `<iframe width="200px" height="120px" src= ${video.videoURL} allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>`
-
+//1920x1080
         let div3 = document.createElement('div');
         div3.className = "videoinfo";
         div3.innerHTML = `<p>${video.title}</p>
