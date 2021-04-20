@@ -55,3 +55,9 @@ Update existing Video [ PUT ​/video/{{video_id}}​​]
     ●This data should be read from the csv file.
     ●An additional checkbox with “archive” label
     ●Archived videos should not be visible whenever I’m retrieving data
+    
+    #How to run application
+    
+    To run application you need to have MongoDB, Node,js and Express installed.
+    1. First run Mongo server with command `sudo mongod`
+    2. Second run Express server with command `npm run dev`
